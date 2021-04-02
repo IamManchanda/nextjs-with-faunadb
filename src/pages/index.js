@@ -1,9 +1,10 @@
 import Head from "next/head";
+import { Fragment } from "react";
 import ReactiveCounter from "../components/reactive-counter";
 
 function PageIndex() {
   return (
-    <div>
+    <Fragment>
       <Head>
         <title>Next.js - Pure React State Management</title>
         <link rel="icon" href="/favicon.ico" />
@@ -14,7 +15,7 @@ function PageIndex() {
           <ReactiveCounter max={15} step={5} />
         </section>
       </main>
-    </div>
+    </Fragment>
   );
 }
 
