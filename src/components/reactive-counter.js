@@ -35,9 +35,12 @@ function ReactiveCounter({ max, step }) {
 
   //#region useEffect(s)
   useEffect(() => {
-    setTimeout(() => {
+    const id = setInterval(() => {
       console.log(`Count: ${count}`);
     }, 3000);
+    return () => {
+      clearInterval(id);
+    };
   }, [count]);
   //#endregion
 
