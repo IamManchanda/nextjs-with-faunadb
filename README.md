@@ -1,1 +1,1 @@
-# Next.js - Pure React State Management
+# Next.js with FaunaDB
