@@ -1,7 +1,19 @@
 import Head from "next/head";
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 
 function PageIndex() {
+  const [data, setData] = useState([]);
+
+  async function getData() {
+    const response = await fetch("/api/customers");
+    const responseData = await response.json();
+    setData[responseData];
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <Fragment>
       <Head>
