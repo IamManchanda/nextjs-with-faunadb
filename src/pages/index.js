@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Fragment, useState, useEffect } from "react";
+import { Heading } from "@chakra-ui/react";
 
 function PageIndex() {
   const [data, setData] = useState([]);
@@ -20,8 +21,13 @@ function PageIndex() {
         <title>Next.js with FaunaDB</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Heading as="h1" my={2} textAlign="center">
+        Next.js, FaunaDB & Serverless
+      </Heading>
 
-      <main></main>
+      <Heading as="h3" my={2} textAlign="center">
+        Customer Data
+      </Heading>
     </Fragment>
   );
 }
