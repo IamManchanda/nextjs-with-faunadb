@@ -22,6 +22,37 @@ async function handleCustomers(req, res) {
       }
       break;
 
+    case "POST":
+      const { data: formData } = req.body;
+      try {
+        const { data } = await client.query(
+          q.Create(q.Collection("customers"), {
+            data: {
+              firstName: formData.firstName,
+              lastName: formData.lastName,
+              address: {
+                street: formData.streetAddress,
+                city: formData.city,
+                state: formData.state,
+                zipCode: formData.zipCode,
+              },
+              telephone: formData.phoneNumber,
+              creditCard: {
+                network: formData.cardType,
+                number: formData.cardNumber,
+              },
+            },
+          }),
+        );
+        res.status(200).json(data);
+      } catch (error) {
+        console.log({ error });
+        res.status(500).json({
+          message: "Something went Wrong!",
+        });
+      }
+      break;
+
     default:
       res.status(500).json({
         message: "Something went Wrong!",

@@ -1,6 +1,19 @@
 import Head from "next/head";
 import { Fragment, useState, useEffect } from "react";
-import { Heading, Flex, Stack, Box, Text, Divider } from "@chakra-ui/react";
+import {
+  Heading,
+  Flex,
+  Stack,
+  Box,
+  Text,
+  Divider,
+  Button,
+  Input,
+  FormControl,
+  FormLabel,
+  RadioGroup,
+  Radio,
+} from "@chakra-ui/react";
 import CustomerData from "../components/customer-data";
 
 function PageIndex() {
