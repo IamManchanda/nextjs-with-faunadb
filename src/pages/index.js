@@ -89,7 +89,6 @@ function PageIndex() {
                 Phone Number:
               </Heading>
               <Divider border="4px" />
-              <Divider border="4px" />
               <Heading mb={6} as="h4">
                 Credit Card:
               </Heading>
@@ -109,7 +108,6 @@ function PageIndex() {
                 <Text>Loading...</Text>
               </Fragment>
             )}
-            <CustomerData />
           </Flex>
         </Box>
 
