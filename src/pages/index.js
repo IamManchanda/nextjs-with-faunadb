@@ -169,11 +169,11 @@ function PageIndex() {
                   onChange={handleChange}
                   aria-describedby="phoneNumber-helper-text"
                 />
-                <RadioGroup name="cardType" my={4} spacing={8} isInline>
+                <RadioGroup my={4} spacing={8} isInline>
                   <FormLabel htmlFor="cardType">Card Type</FormLabel>
                   <Radio
                     onChange={handleChange}
-                    name="Visa"
+                    name="cardType"
                     value="Visa"
                     label="Visa"
                   >
@@ -181,7 +181,7 @@ function PageIndex() {
                   </Radio>
                   <Radio
                     onChange={handleChange}
-                    name="MasterCard"
+                    name="cardType"
                     label="MasterCard"
                     value="MasterCard"
                   >
@@ -189,7 +189,7 @@ function PageIndex() {
                   </Radio>
                   <Radio
                     onChange={handleChange}
-                    name="Amex"
+                    name="cardType"
                     value="Amex"
                     label="Amex"
                   >
