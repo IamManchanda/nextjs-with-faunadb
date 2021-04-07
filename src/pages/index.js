@@ -64,7 +64,7 @@ function PageIndex() {
   return (
     <Fragment>
       <Head>
-        <title>Next.js with FaunaDB!</title>
+        <title>Next.js with FaunaDB</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
