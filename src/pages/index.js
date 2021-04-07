@@ -32,6 +32,13 @@ function PageIndex() {
     addCustomer();
   }
 
+  function handleChange(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  }
+
   async function addCustomer() {
     try {
       await fetch("/api/customers", {
@@ -47,13 +54,6 @@ function PageIndex() {
     } catch (error) {
       console.log({ error });
     }
-  }
-
-  function handleChange(event) {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
   }
 
   useEffect(() => {
