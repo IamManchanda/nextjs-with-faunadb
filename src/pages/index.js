@@ -72,27 +72,14 @@ function PageIndex() {
           Next.js, FaunaDB & Serverless
         </Heading>
 
-        <br />
+        <Divider mt={8} border="1px" />
 
-        <Box mt={24}>
+        <Box mt={6}>
           <Heading as="h2" my={2} textAlign="center">
             Customer Data Table
           </Heading>
 
           <Flex align="center" justify="center">
-            <Stack>
-              <Heading mb={6} as="h4">
-                Full Name:
-              </Heading>
-              <Divider border="4px" />
-              <Heading mb={6} as="h4">
-                Phone Number:
-              </Heading>
-              <Divider border="4px" />
-              <Heading mb={6} as="h4">
-                Credit Card:
-              </Heading>
-            </Stack>
             {data.length > 0 ? (
               data.map((d) => (
                 <CustomerData
@@ -111,11 +98,9 @@ function PageIndex() {
           </Flex>
         </Box>
 
-        <br />
+        <Divider mt={6} border="1px" />
 
-        <Divider border="4px" />
-
-        <Box mt={24}>
+        <Box mt={6}>
           <Heading as="h2" mt={6} textAlign="center">
             Add a New Customer
           </Heading>

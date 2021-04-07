@@ -11,7 +11,7 @@ function CustomerData({ firstName, lastName, telephone, creditCard }) {
         </Box>
       </Stack>
 
-      <Divider border="4px" />
+      <Divider border="2px" />
 
       <Stack isInline>
         <Box>
@@ -21,7 +21,7 @@ function CustomerData({ firstName, lastName, telephone, creditCard }) {
         </Box>
       </Stack>
 
-      <Divider border="4px" />
+      <Divider border="2px" />
 
       <Stack isInline>
         <Box>
