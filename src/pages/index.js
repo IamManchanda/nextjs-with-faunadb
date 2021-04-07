@@ -152,7 +152,7 @@ function PageIndex() {
                     onChange={handleChange}
                     aria-describedby="state-helper-text"
                   />
-                  <FormLabel htmlFor="zipCode">Zip Code</FormLabel>
+                  <FormLabel htmlFor="zipCode">Zip</FormLabel>
                   <Input
                     type="text"
                     name="zipCode"
@@ -170,6 +170,7 @@ function PageIndex() {
                   aria-describedby="phoneNumber-helper-text"
                 />
                 <RadioGroup name="cardType" my={4} spacing={8} isInline>
+                  <FormLabel htmlFor="cardType">Card Type</FormLabel>
                   <Radio
                     onChange={handleChange}
                     name="Visa"
