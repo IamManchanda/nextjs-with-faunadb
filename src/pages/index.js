@@ -105,7 +105,7 @@ function PageIndex() {
           <Heading as="h2" mt={6} textAlign="center">
             Add a New Customer
           </Heading>
-          <Flex mt={12} align="center" justify="center">
+          <Flex mt={6} align="center" justify="center">
             <form onSubmit={handleSubmit} method="POST">
               <FormControl onChange={handleChange}>
                 <FormLabel htmlFor="firstName">First Name</FormLabel>
