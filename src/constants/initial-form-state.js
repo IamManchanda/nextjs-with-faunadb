@@ -7,7 +7,7 @@ const INITIAL_FORM_STATE = Object.freeze({
   zipCode: "",
   phoneNumber: "",
   cardType: "",
-  cardNumber: null,
+  cardNumber: "",
 });
 
 export default INITIAL_FORM_STATE;

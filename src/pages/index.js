@@ -27,9 +27,10 @@ function PageIndex() {
     setData(resData);
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    addCustomer();
+    await addCustomer();
+    setFormData(INITIAL_FORM_STATE);
   }
 
   function handleChange(event) {
@@ -112,6 +113,7 @@ function PageIndex() {
                   type="text"
                   name="firstName"
                   id="firstName"
+                  value={formData.firstName}
                   onChange={handleChange}
                   aria-describedby="first-name-helper-text"
                 />
@@ -120,6 +122,7 @@ function PageIndex() {
                   type="text"
                   id="lastName"
                   name="lastName"
+                  value={formData.lastName}
                   onChange={handleChange}
                   aria-describedby="last-name-helper-text"
                 />
@@ -128,6 +131,7 @@ function PageIndex() {
                   type="text"
                   id="streetAddress"
                   name="streetAddress"
+                  value={formData.streetAddress}
                   onChange={handleChange}
                   aria-describedby="street-address-helper-text"
                 />
@@ -139,6 +143,7 @@ function PageIndex() {
                     type="text"
                     id="city"
                     name="city"
+                    value={formData.city}
                     onChange={handleChange}
                     aria-describedby="city-helper-text"
                   />
@@ -149,6 +154,7 @@ function PageIndex() {
                     type="text"
                     id="state"
                     name="state"
+                    value={formData.state}
                     onChange={handleChange}
                     aria-describedby="state-helper-text"
                   />
@@ -157,6 +163,7 @@ function PageIndex() {
                     type="text"
                     name="zipCode"
                     id="zipCode"
+                    value={formData.zipCode}
                     onChange={handleChange}
                     aria-describedby="zipcode-helper-text"
                   />
@@ -166,32 +173,38 @@ function PageIndex() {
                   type="text"
                   name="phoneNumber"
                   id="phoneNumber"
+                  value={formData.phoneNumber}
                   onChange={handleChange}
                   aria-describedby="phoneNumber-helper-text"
                 />
-                <RadioGroup my={4} spacing={8} isInline>
+                <RadioGroup
+                  my={4}
+                  spacing={8}
+                  isInline
+                  value={formData.cardType}
+                >
                   <FormLabel htmlFor="cardType">Card Type</FormLabel>
                   <Radio
-                    onChange={handleChange}
                     name="cardType"
                     value="Visa"
                     label="Visa"
+                    onChange={handleChange}
                   >
                     Visa
                   </Radio>
                   <Radio
-                    onChange={handleChange}
                     name="cardType"
-                    label="MasterCard"
                     value="MasterCard"
+                    label="MasterCard"
+                    onChange={handleChange}
                   >
                     MasterCard
                   </Radio>
                   <Radio
-                    onChange={handleChange}
                     name="cardType"
                     value="Amex"
                     label="Amex"
+                    onChange={handleChange}
                   >
                     American Express
                   </Radio>
@@ -201,6 +214,7 @@ function PageIndex() {
                   type="number"
                   name="cardNumber"
                   id="cardNumber"
+                  value={formData.cardNumber}
                   onChange={handleChange}
                   aria-describedby="cardNumber-helper-text"
                 />
